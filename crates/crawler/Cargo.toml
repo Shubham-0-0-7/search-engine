@@ -1,0 +1,15 @@
+[package]
+name = "crawler"
+edition.workspace = true
+version.workspace = true
+
+[dependencies]
+common = { path = "../common" }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "sync"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "gzip"] }
+scraper = "0.20"
+texting_robots = "0.2"
+sha2 = "0.10"
+serde_json = "1"
+anyhow = "1"
+url = "2"
